@@ -27,7 +27,7 @@ output HDMI-A-1 res 1920x1080@60Hz pos 0 0
 
 # --- Laptop Screen (eDP-1) on the right ---
 # Positioned at X=1920 because the first monitor is 1920 pixels wide
-output eDP-1 res 1920x1080 pos 1920 0
+output eDP-1 res 1920x1080@144Hz pos 1920 0
 # output eDP-1 adaptive_sync on
 
 #output DP-3 resolution 1920x1080@239.649Hz position 1920 0 transform normal
@@ -53,6 +53,9 @@ for_window [class="brave"] floating enable
 # Bind the the key for floating the window 
 
 bindsym $mod+Shift+Return floating toggle
+
+# Toggle wlsunset (Blue light filter) with Ctrl + Mod + N
+bindsym Ctrl+$mod+n exec pkill wlsunset && notify-send "Night Light" "Disabled" -t 1000 || (wlsunset -t 3850 & notify-send "Night Light" "Enabled" -t 1000)
 
 # Move the floating window with mouse 
 
