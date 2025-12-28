@@ -634,3 +634,4 @@ eval "$(starship init bash)"
 eval "$(zoxide init bash)"
 source -- ~/.local/share/blesh/ble.sh
 # (cat ~/.cache/wal/sequences &)
+export PATH="$PATH:$HOME/.dotnet/tools"
