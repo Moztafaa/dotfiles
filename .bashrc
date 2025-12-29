@@ -634,4 +634,9 @@ eval "$(starship init bash)"
 eval "$(zoxide init bash)"
 source -- ~/.local/share/blesh/ble.sh
 # (cat ~/.cache/wal/sequences &)
-export PATH="$PATH:$HOME/.dotnet/tools"
+# export PATH="$PATH:$HOME/.dotnet/tools"
+export PATH="$HOME/.dotnet:$HOME/.dotnet/tools:$PATH"
+
+export NVM_DIR="$HOME/.config/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

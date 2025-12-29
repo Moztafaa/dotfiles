@@ -1,0 +1,20 @@
+window {
+    margin: 5px;
+    border: 2px solid #3584e4; /* Fedora Blue */
+    background-color: #242424;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 14px;
+}
+
+#entry:selected {
+    background-color: #3584e4;
+    color: white;
+}
+
+#input {
+    background-color: #303030;
+    color: white;
+    border: none;
+    margin: 5px;
+    padding: 5px;
+}

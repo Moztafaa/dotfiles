@@ -30,6 +30,7 @@
         "sway/language",
         "battery",
         "clock",
+				"custom/nightlight",
         "tray"
     ],
     "custom/spotify": {
@@ -233,6 +234,14 @@
             "suspend": "systemctl suspend",
             "hibernate": "systemctl hibernate"
         }
-    }
+    },
+		"custom/nightlight": {
+			"format": " {icon} ",
+			"format-icons": [""],
+			"return-type": "json",
+			"exec": "pgrep wlsunset > /dev/null && echo '{\"class\": \"active\"}' || echo '{\"class\": \"inactive\"}'",
+			"interval": 2,
+			"on-click": "pkill wlsunset || wlsunset -t 3850"
+		}
 }
 

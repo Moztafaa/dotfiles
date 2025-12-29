@@ -188,3 +188,11 @@ i#workspaces button.focused + button {
     margin: 0 4px;
     font-weight: bold; /* Optional: adds emphasis to the temperature/icon */
 }
+
+
+#custom-nightlight.active {
+    color: #ff9e64; /* Orange/Warm color */
+}
+#custom-nightlight.inactive {
+    color: #565f89; /* Faded/Dark color */
+}

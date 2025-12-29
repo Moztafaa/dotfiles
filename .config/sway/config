@@ -57,6 +57,19 @@ bindsym $mod+Shift+Return floating toggle
 # Toggle wlsunset (Blue light filter) with Ctrl + Mod + N
 bindsym Ctrl+$mod+n exec pkill wlsunset && notify-send "Night Light" "Disabled" -t 1000 || (wlsunset -t 3850 & notify-send "Night Light" "Enabled" -t 1000)
 
+
+# --- Clipboard Management ---
+
+# 1. Start the watcher to store everything you copy
+# We use -t text to avoid issues with large image data in some apps
+exec wl-paste -t text --watch clipman store --max-items=500
+
+# 2. Keybind to show the history in a floating menu
+# We use Ctrl + Mod + V to keep it consistent with your other shortcuts
+bindsym Ctrl+$mod+v exec clipman pick -t wofi
+
+# 3. Keybind to clear the history
+bindsym $mod+Shift+v exec clipman clear --all
 # Move the floating window with mouse 
 
 floating_modifier $mod
