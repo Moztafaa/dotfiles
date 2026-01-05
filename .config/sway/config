@@ -449,6 +449,9 @@ bindsym $mod+Shift+p exec swaylock -i /path/to/image
     bindsym $mod+s layout stacking
     bindsym $mod+w layout tabbed
     bindsym $mod+e layout toggle split
+    
+    # Toggle split orientation (horizontal/vertical)
+    # bindsym $mod+j layout toggle split
 
     # Make the current focus fullscreen
     bindsym $mod+f fullscreen

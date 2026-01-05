@@ -2,9 +2,18 @@
 application/x-shellscript=org.gnome.gedit.desktop;
 
 [Default Applications]
-text/html=app.zen_browser.zen.desktop
-x-scheme-handler/http=app.zen_browser.zen.desktop
-x-scheme-handler/https=app.zen_browser.zen.desktop
-x-scheme-handler/about=app.zen_browser.zen.desktop
-x-scheme-handler/unknown=app.zen_browser.zen.desktop
+text/html=zen-browser.desktop
+x-scheme-handler/http=zen-browser.desktop
+x-scheme-handler/https=zen-browser.desktop
+x-scheme-handler/about=zen-browser.desktop
+x-scheme-handler/unknown=zen-browser.desktop
+application/xhtml+xml=zen-browser.desktop
 x-scheme-handler/jetbrains=jetbrains-toolbox.desktop
+x-scheme-handler/apidog=apidog.desktop
+video/mp4=mpv.desktop
+video/x-matroska=mpv.desktop
+video/webm=mpv.desktop
+video/x-flv=mpv.desktop
+video/x-msvideo=mpv.desktop
+video/quicktime=mpv.desktop
+video/mpeg=mpv.desktop
