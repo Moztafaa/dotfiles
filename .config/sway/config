@@ -54,6 +54,10 @@ for_window [class="brave"] floating enable
 
 bindsym $mod+Shift+Return floating toggle
 
+
+# Toggle opacity (Super + T مثلاً)
+bindsym $mod+t exec ~/.config/sway/toggle_opacity.sh
+
 # Toggle wlsunset (Blue light filter) with Ctrl + Mod + N
 bindsym Ctrl+$mod+n exec pkill wlsunset && notify-send "Night Light" "Disabled" -t 1000 || (wlsunset -t 3850 & notify-send "Night Light" "Enabled" -t 1000)
 
@@ -116,10 +120,22 @@ exec_always ~/.config/wal/wal-set
 # Example configuration:
 #
 # exec swayidle -w \
-#          timeout 300 'swaylock -f -c 000000' \
-#          timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
+#          timeout 3000 'swaylock -f -c 000000' \
+#          timeout 6000 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
 #          before-sleep 'swaylock -f -c 000000'
-#
+
+# Idle configuration
+# الجهاز هيقفل بعد 20 دقيقة (1200 ثانية) بخلفية سوداء
+# exec swayidle -w \
+#     timeout 1200 'swaylock -f -c 000000' \
+#     before-sleep 'swaylock -f -c 000000'
+# #
+# وقف أي نسخة قديمة وشغل إعداداتك إنت بس
+# exec_always "pkill swayidle; swayidle -w \
+#     timeout 600 'swaylock -f -c 000000' \
+#     before-sleep 'swaylock -f -c 000000'"
+
+# bindsym $mod+Shift+p exec swaylock -c 000000
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
 # resumed. It will also lock your screen before your computer goes to sleep.
@@ -159,7 +175,7 @@ set $gruv_gray      #a89984
 # WINDOW BORDER CONFIGURATION
 # -----------------------------------------------------------------------------
 # Set the gaps between windows
-gaps inner 4 
+gaps inner 2 
 
 # Set the gaps around the edge of the screen
 gaps outer 2
@@ -377,12 +393,11 @@ exec export XKB_CONFIG_ROOT=/usr/share/X11/xkb
 
 
 exec swayidle -w \
-   timeout 300 'swaylock -f -i /path/to/image' \
-    before-sleep 'swaylock -f -i /path/to/image'
+   timeout 600 'swaylock -f -i /home/moztafa/Pictures/wallpapers/omarchy/1-matte-black.jpg' \
+    before-sleep 'swaylock -f -i /home/moztafa/Pictures/wallpapers/omarchy/1-matte-black.jpg'
 
 # Shortcut for lockscreen with swaylock 
-bindsym $mod+Shift+p exec swaylock -i /path/to/image
-
+bindsym $mod+Shift+p exec swaylock -i /home/moztafa/Pictures/wallpapers/omarchy/1-matte-black.jpg
 
 
 # Moving around:

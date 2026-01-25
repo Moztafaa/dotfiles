@@ -161,23 +161,23 @@ alias bd='cd "$OLDPWD"'
 alias rmd='/bin/rm  --recursive --force --verbose '
 
 # Alias's for multiple directory listing commands
-alias la='ls -Alh'                # show hidden files
-alias ls='ls -aFh --color=always' # add colors and file type extensions
-alias lx='ls -lXBh'               # sort by extension
-alias lk='ls -lSrh'               # sort by size
+alias la='eza -Alh'               # show hidden files
+alias ls='eza -ah --color=always' # add colors and file type extensions
+alias lx='eza -lXBh'              # sort by extension
+alias lk='eza -lSrh'              # sort by size
 alias lc='ls -ltcrh'              # sort by change time
 alias lu='ls -lturh'              # sort by access time
-alias lr='ls -lRh'                # recursive ls
+alias lr='eza -lRh'               # recursive ls
 alias lt='ls -ltrh'               # sort by date
-alias lm='ls -alh |more'          # pipe through 'more'
-alias lw='ls -xAh'                # wide listing format
+alias lm='eza -alh |more'         # pipe through 'more'
+alias lw='eza -xAh'               # wide listing format
 alias ll='ls -Fls'                # long listing format
 alias labc='ls -lap'              # alphabetical sort
 alias lf="ls -l | egrep -v '^d'"  # files only
 alias ldir="ls -l | egrep '^d'"   # directories only
-alias lla='ls -Al'                # List and Hidden Files
-alias las='ls -A'                 # Hidden Files
-alias lls='ls -l'                 # List
+alias lla='eza -Al'               # List and Hidden Files
+alias las='eza -A'                # Hidden Files
+alias lls='eza -l'                # List
 
 # alias chmod commands
 alias mx='chmod a+x'
@@ -635,8 +635,10 @@ eval "$(zoxide init bash)"
 source -- ~/.local/share/blesh/ble.sh
 # (cat ~/.cache/wal/sequences &)
 # export PATH="$PATH:$HOME/.dotnet/tools"
-export PATH="$HOME/.dotnet:$HOME/.dotnet/tools:$PATH"
+# export PATH="$HOME/.dotnet:$HOME/.dotnet/tools:$PATH"
 
 export NVM_DIR="$HOME/.config/nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
+
+export PATH="$PATH:$HOME/.dotnet/tools"
