@@ -103,6 +103,9 @@ set $menu $rofi_cmd -show combi -combi-modes drun#run -modes combi
 # Requires: desktop-backgrounds-compat, swaybg, jxl-pixbuf-loader
 #output * bg /home/omania/my-wallpapers/foreset.jpg fill
 
+# Autoitiling
+exec_always ~/.local/bin/autotiling
+
 # Load Pywal colors
 include ~/.cache/wal/colors-sway
 exec_always ~/.config/wal/wal-set

@@ -146,6 +146,11 @@ alias svi='sudo vi'
 alias vis='nvim "+set si"'
 alias yayf="yay -Slq | fzf --multi --preview 'yay -Sii {1}' --preview-window=down:75% | xargs -ro yay -S"
 
+# Alias for dotnet
+alias dr='dotnet run'
+alias db='dotnet build'
+alias dc='dotnet clean'
+
 # Change directory aliases
 alias home='cd ~'
 alias cd..='cd ..'
