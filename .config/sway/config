@@ -395,13 +395,23 @@ exec export XKB_CONFIG_ROOT=/usr/share/X11/xkb
 # bindsym $mod+Shift+Alt+b exec killall -SIGUSR2 waybar
 
 
+#    timeout 600 'swaylock -f -i /home/moztafa/Pictures/wallpapers/omarchy/1-matte-black.jpg' \
+#     before-sleep 'swaylock -f -i /home/moztafa/Pictures/wallpapers/omarchy/1-matte-black.jpg'
+#
+# # Shortcut for lockscreen with swaylock 
+# bindsym $mod+Shift+p exec swaylock -i /home/moztafa/Pictures/wallpapers/omarchy/1-matte-black.jpg
+
+### Idle configuration
 exec swayidle -w \
-   timeout 600 'swaylock -f -i /home/moztafa/Pictures/wallpapers/omarchy/1-matte-black.jpg' \
-    before-sleep 'swaylock -f -i /home/moztafa/Pictures/wallpapers/omarchy/1-matte-black.jpg'
+          timeout 240 '$HOME/.config/sway/scripts/lock.sh' \
+          before-sleep '$HOME/.config/sway/scripts/lock.sh'
 
-# Shortcut for lockscreen with swaylock 
-bindsym $mod+Shift+p exec swaylock -i /home/moztafa/Pictures/wallpapers/omarchy/1-matte-black.jpg
 
+### Manual Lock
+bindsym --release $mod+Shift+p exec '$HOME/.config/sway/scripts/lock.sh'
+# bindsym --release $mod+Control+s exec '$HOME/.config/sway/scripts/lock.sh'
+
+### End Idel configuration
 
 # Moving around:
 #
